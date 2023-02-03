@@ -8,8 +8,9 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import {FaBars, FaTimes} from "react-icons/fa"
+import MenuIcon from '@mui/icons-material/Menu';
 import "./Drawer.css";
+import categories from './data';
 
 
 
@@ -37,21 +38,24 @@ export default function SwipeableTemporaryDrawer() {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
+     
+
       <List>
-        {['All News', 'India', 'Business', 'Sports', "World", "Politics", "Technology", "Startup", "Entertainment"]
-        .map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
+        <ListItemIcon>
+        </ListItemIcon>
+
+        <Button className='eng'>English</Button>
+        <Button >हिन्दी</Button>
+        <Divider />
+
+          <ListItem>
+            <Divider />
+            <p className='categ'>Categories </p>
           </ListItem>
-        ))}
       </List>
       <Divider />
       <List>
-        {['Miscellaneous', 'Hatke', 'Science', "Automobiles"].map((text, index) => (
+        {categories.map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
@@ -70,7 +74,7 @@ export default function SwipeableTemporaryDrawer() {
         <React.Fragment key={'left'}>
 
           <Button onClick={toggleDrawer('left', true)}>
-            <FaBars className='meniIcon'/>
+            <MenuIcon className='menuIcon'/>
           </Button>
 
           <SwipeableDrawer

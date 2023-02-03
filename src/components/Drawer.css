@@ -1,4 +1,8 @@
-.meniIcon{
+.menuIcon{
   color: black !important;
-  font-size: 25px;
+  font-size: 30px !important;
+}
+
+.eng{
+  text-transform: capitalize !important;
 }
