@@ -5,13 +5,15 @@
 }
 
 .nav{
- height: 70px;
- box-shadow: 0px 1px 6px grey;
- display: flex;
- align-items: center;
+display: flex;
+align-items: center;
+height: 70px;
+box-shadow: 0px 1px 6px grey;
+width: 100%;
+/* position: fixed; */
 }
 
 .menu{
-  flex: 0.48;
+  flex: 0.50;
   padding-left: 15px;
 }

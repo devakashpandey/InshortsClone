@@ -4,12 +4,12 @@ import {FaBars, FaTimes} from "react-icons/fa"
 import HamburgerDrawer from "./HamburgerDrawer.js"
 
 
-const Nav = () => {
+const Nav = ({setCategory}) => {
   return (
      <>
       <div className='nav'>
         <div className='menu'>
-                      <HamburgerDrawer />
+                      <HamburgerDrawer setCategory={setCategory} />
         </div>
         <img src="https://assets.inshorts.com/website_assets/images/logo_inshorts.png" 
         alt="" className='logo'></img>

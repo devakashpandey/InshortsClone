@@ -13,8 +13,7 @@ import "./Drawer.css";
 import categories from './data';
 
 
-
-export default function SwipeableTemporaryDrawer() {
+export default function SwipeableTemporaryDrawer({setCategory}) {
   const [state, setState] = React.useState({
     left: false,
   });
@@ -38,7 +37,6 @@ export default function SwipeableTemporaryDrawer() {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-     
 
       <List>
         <ListItemIcon>
@@ -50,13 +48,18 @@ export default function SwipeableTemporaryDrawer() {
 
           <ListItem>
             <Divider />
-            <p className='categ'>Categories </p>
+            <p className='categ'> Categories </p>
           </ListItem>
       </List>
       <Divider />
+
       <List>
         {categories.map((text, index) => (
-          <ListItem key={text} disablePadding>
+          <ListItem 
+          onClick={() => setCategory(text)} 
+          key={text} 
+          disablePadding>
+            
             <ListItemButton>
               <ListItemIcon>
               </ListItemIcon>
