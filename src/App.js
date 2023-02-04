@@ -7,10 +7,11 @@ import NewsResults from './components/NewsResults';
 
 function App() {
 
-  const [category, setCategory] = useState("general")
-  const [resultsCount, setResultsCount ] = useState("")
-  const [newsArray, setNewsArray ] = useState([])
-  const [loadmore, setLoadMore] = useState(10)
+  const [category, setCategory] = useState("general") // for storing the category section
+  const [resultsCount, setResultsCount ] = useState("")  // for storing all articles count (use for "load more" button)
+  const [newsArray, setNewsArray ] = useState([])  // for stroing all articles
+  
+  const [loadmore, setLoadMore] = useState(10)  // for storing "load more" counting
 
 
   const newsAPI = async () =>{

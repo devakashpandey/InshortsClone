@@ -14,8 +14,8 @@ const NewsResults = ({newsArray, resultsCount, loadmore, setLoadMore}) => {
                {
                  newsArray.map((allNews,id) => {
                       return(
-                      <div className='card'>
-                            <NewsCard allNews ={allNews} key={id} />
+                      <div className='card' key={id}>
+                            <NewsCard allNews ={allNews} />
                       </div>
                          
                       )
@@ -39,7 +39,7 @@ const NewsResults = ({newsArray, resultsCount, loadmore, setLoadMore}) => {
     <footer>
       <div className='footer'>
         <div className='info'>
-           <p>Copyright © 2023 - All Rights Reserved -  Akash Pandey</p>
+           <p>Copyright © 2023 - All Rights Reserved - Akash Pandey</p>
                       
         <div className='icon'>
            <a href="https://www.linkedin.com/in/devakashpandey/" target="_blank"><AiFillLinkedin/></a>

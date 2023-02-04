@@ -4,12 +4,12 @@ import "./NewsCard.css"
 const NewsCard = ({allNews}) => {
 
   const fullDate = new Date(allNews.publishedAt)
-  var date = fullDate.toString().split(" ");
+  var date = fullDate.toString().split(" ");  // converting the time in array
 
-  const hour = parseInt(date[4].slice(0,2))
-  const min = parseInt(date[4].slice(3,5))
+  const hour = parseInt(date[4].slice(0,2))  // get the hour
+  const min = parseInt(date[4].slice(3,5))  // get the min
 
-  const time = hour > 12 ? true : false
+  const time = hour > 12 ? true : false  // for converting 24 hr format in 12 hr
 
   return (
      <>
