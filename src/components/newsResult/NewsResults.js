@@ -2,7 +2,6 @@ import { Button, Container } from "@mui/material";
 import React from "react";
 import "./NewsResults.css";
 import NewsCard from "../newscard/NewsCard";
-import { AiFillLinkedin } from "react-icons/ai";
 
 const NewsResults = ({ newsArray, resultsCount, loadmore, setLoadMore }) => {
   return (
@@ -33,23 +32,6 @@ const NewsResults = ({ newsArray, resultsCount, loadmore, setLoadMore }) => {
           </>
         )}
       </Container>
-
-      <footer>
-        <div className="footer">
-          <div className="info">
-            <p>Copyright © 2023 - All Rights Reserved - Akash Pandey</p>
-
-            <div className="icon">
-              <a
-                href="https://www.linkedin.com/in/devakashpandey/"
-                target="_blank"
-              >
-                <AiFillLinkedin />
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
     </>
   );
 };

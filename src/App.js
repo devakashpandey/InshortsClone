@@ -4,6 +4,7 @@ import Nav from "./components/navbar/Nav";
 import axios from "axios";
 import API_KEY from "./keys";
 import NewsResults from "./components/newsResult/NewsResults";
+import Footer from "./components/footer/Footer";
 
 function App() {
   const [category, setCategory] = useState("general"); // for storing the category section
@@ -40,6 +41,7 @@ function App() {
         loadmore={loadmore}
         setLoadMore={setLoadMore}
       />
+      <Footer />
     </>
   );
 }
